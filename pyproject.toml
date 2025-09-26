@@ -5,18 +5,7 @@ description = "social network python http server"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "django==5.2.6",
-    "djangorestframework>=3.16.1",
-    "pre-commit==4.3.0",
+  "django==5.2.6",
+  "djangorestframework>=3.16.1",
+  "pre-commit==4.3.0",
 ]
-
-[tool.black]
-target-version = ['py313']
-line-length = 88
-
-[tool.isort]
-profile = "black"
-
-[tool.flake8]
-max-line-length = 88
-extend-ignore = ['E203', 'W503', 'F401']
