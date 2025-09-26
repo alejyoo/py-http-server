@@ -1,0 +1,65 @@
+# Git
+.git
+.gitignore
+
+# Python
+pycache
+*.pyc
+*.pyo
+.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Virtual environments
+.venv
+venv
+ENV
+env
+
+# IDEs
+.vscode
+.idea
+*.swp
+.swo
+
+# OS
+.DS_Store
+.DSStore?
+.
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Django
+.log
+db.sqlite3
+db.sqlite3-journal
+media
+staticfiles
+
+#Node
+node_modules
+npm-debug.log
+
+#Build
+dist
+build
+*.egg-info
+
+#Documentation
+docs/_build
