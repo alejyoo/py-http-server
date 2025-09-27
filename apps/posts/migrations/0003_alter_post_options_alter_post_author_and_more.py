@@ -9,33 +9,52 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0002_post_updated_at'),
+        ("posts", "0002_post_updated_at"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='post',
-            options={'ordering': ['-created_at'], 'verbose_name': 'Post', 'verbose_name_plural': 'Posts'},
+            name="post",
+            options={
+                "ordering": ["-created_at"],
+                "verbose_name": "Post",
+                "verbose_name_plural": "Posts",
+            },
         ),
         migrations.AlterField(
-            model_name='post',
-            name='author',
-            field=models.ForeignKey(help_text='Author of the post', on_delete=django.db.models.deletion.CASCADE, related_name='posts', to=settings.AUTH_USER_MODEL, verbose_name='Author'),
+            model_name="post",
+            name="author",
+            field=models.ForeignKey(
+                help_text="Author of the post",
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="posts",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Author",
+            ),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='content',
-            field=models.TextField(help_text='Post (400 char. maximum)', max_length=400, validators=[django.core.validators.MinLengthValidator(1, 'Post must be at least 1 character long.')], verbose_name='Content'),
+            model_name="post",
+            name="content",
+            field=models.TextField(
+                help_text="Post (400 char. maximum)",
+                max_length=400,
+                validators=[
+                    django.core.validators.MinLengthValidator(
+                        1, "Post must be at least 1 character long."
+                    )
+                ],
+                verbose_name="Content",
+            ),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='created_at',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created at'),
+            model_name="post",
+            name="created_at",
+            field=models.DateTimeField(auto_now_add=True, verbose_name="Created at"),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='updated_at',
-            field=models.DateTimeField(auto_now=True, verbose_name='Updated at'),
+            model_name="post",
+            name="updated_at",
+            field=models.DateTimeField(auto_now=True, verbose_name="Updated at"),
         ),
     ]
