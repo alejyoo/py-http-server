@@ -18,7 +18,7 @@ class User(AbstractUser):
         help_text="Bio (500 char. maximum)",
     )
 
-    date_of_birth = models.DateField(help_text="Obligatory.")
+    date_of_birth = models.DateField(help_text="Obligatory.", blank=True, null=True)
 
     gender = models.CharField(
         max_length=1, choices=GENDER_CHOICES, blank=True, null=True
