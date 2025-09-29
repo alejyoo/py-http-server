@@ -67,8 +67,6 @@ class UserCreateSerializer(serializers.ModelSerializer):
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    """Serializer para el perfil del usuario autenticado"""
-
     full_name = serializers.SerializerMethodField()
     age = serializers.SerializerMethodField()
     has_profile_pic = serializers.SerializerMethodField()
